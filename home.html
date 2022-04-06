@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+	<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+	<title>Neigghbour</title>
+</head>
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Yesteryear&family=Aclonica&display=swap');
+	body{
+		/*background-image: url(https://images.pexels.com/photos/10526919/pexels-photo-10526919.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);*/
+	}
+
+
+	/*Navigationbar start*/
+	.navbar
+	{
+		width: 90%;
+		margin: auto;
+	}
+	.navbar-brand a
+	{
+		text-decoration: none;
+		color: whitesmoke;
+		font-size: 2.5vw;
+		font-family: 'Yesteryear', cursive;
+	}
+	.nav-item .material-icons
+	{
+		margin-bottom: -1vw;
+	}
+	.dropdown-menu
+	{
+		background: transparent;
+	}
+	.nav-item a
+	{
+		font-size: 1.5vw;
+		color: whitesmoke;
+	}
+
+	/*Navigationbar end*/
+
+	/*banner start*/
+	.banner
+	{	
+		border-radius: .5vw;
+		height: 42vw;
+		width: auto;
+		background-image: url(https://images.pexels.com/photos/775219/pexels-photo-775219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.check-in-out-buttons .btn
+	{
+		/*border: 1px solid blue;*/
+		font-family: 'Aclonica', sans-serif;
+		border-radius: 5vw;
+		font-size: 1.5vw;
+		margin-top: 60%;
+		height: 4vw;
+		width: 20vw;
+	}
+	.check-in-out-buttons .avl
+	{
+		margin-top: 3vw;
+	}
+
+	/*banner end*/
+
+	/*rooms start*/
+	.room-btn
+	{
+		padding: 0.5vw;
+		margin-left: 75%;
+		margin-top: -145%;
+		margin-right: -30%;
+		transition: all 0.3s ease;
+	}
+	.room-btn:hover
+	{
+		padding: 1.5vw;
+	}
+	/*rooms end*/
+
+	/*facilitie start*/
+	.facilities-icon img
+	{
+		margin-top: 2vw;
+		height: 5vw;
+		width: auto;
+		transition: all 0.3s ease;		
+	}
+	.facilities-icon img:hover
+	{
+		height: 6vw;
+		width: auto;
+	}
+	/*facilities end*/
+
+	/*location start*/
+	.location-imgs,.location-map
+	{
+		padding: 2%;
+		height: 100%;
+	}
+	.location-map
+	{
+		height: 100%;
+		width: 100%;
+	}
+	.location-icon-img
+	{
+		margin-top: -1vw;
+		height: 3vw;
+		width: auto;
+	}
+	.location-imgs img
+	{
+		height: 5vw;
+		width: auto;
+	}
+	.location-imgs .col-3
+	{
+		transition: all 0.3s ease;
+	}
+	.location-imgs .col-3:hover
+	{
+		padding-right: 2vw;
+	}
+	/*location end*/
+
+	/*footer start*/
+
+	.footer-row
+	{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.footer
+	{ 
+		margin-top: 3vw;
+		background-image: url(footer-img.png);
+		padding: 70px 0;
+	}
+	.footer-col
+	{
+		width: 25%;
+	}
+	ul
+	{
+		list-style: none;
+	}
+	.footer-col h4
+	{
+		margin-left: 2vw;
+		font-size: 18px;
+		color: #ffffff;
+		text-transform: capitalize;
+		margin-bottom: 35px;
+		font-weight: 500;
+		position: relative;
+	}
+	.footer-col ul li a
+	{
+		font-size: 16px;
+		text-transform: capitalize;
+		color: #ffffff;
+		text-decoration: none;
+		font-weight: 300;
+		color: #bbbbbb;
+		display: block;
+		transition: all 0.3s ease;
+	}
+	.footer-col ul li a:hover
+	{
+		color: #ffffff;
+		padding-left: 8px;
+	}
+	.social-icon-section
+	{
+		margin-left: 75%;
+	}
+	.footer-col .social-links a
+	{
+		display: inline-block;
+		height: 40px;
+		width: 40px;
+		background-color: rgba(255,255,255,0.2);
+		margin:0 10px 10px 0;
+		text-align: center;
+		line-height: 40px;
+		border-radius: 50%;
+		color: #ffffff;
+		transition: all 0.5s ease;
+	}
+	.footer-col .social-links a:hover
+	{
+		color: #24262b;
+		background-color: #ffffff;
+	}
+	/*footer end*/
+
+	/*faq start*/
+
+	.faq-section .accordion-item
+	{
+		border-left: 10px solid #465659;
+		border-radius: 2px;
+		margin-top: 5px;
+		width: 70%;
+	}
+	.faq-section
+	{
+		margin-left: 2vw;
+	}
+</style>
+<body>
+	<div class="banner">
+		<!-- Navigationbar start -->
+
+		<div class="navbar shadow p-3 mb-3 rounded">
+			<div class="navbar-brand">
+				<a class="" href="#">Neighbour's Home</a>
+			</div>
+			<div class="nav-list border border-1 border-danger">
+				<ul class="nav nav-tabs bg-transparent">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Rooms</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Deluxe Double Room</a></li>
+							<li><a class="dropdown-item" href="#">Deluxe Suite</a></li>
+							<li><a class="dropdown-item" href="#">Superior Twin Room</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#">Custome</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Facilities</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Reviews</a></li>
+							<li><a class="dropdown-item" href="#">Location</a></li>
+							<li><a class="dropdown-item" href="#">FAQ</a></li>
+							<li><a class="dropdown-item" href="#">privacy Policy</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="admin material-icons text-decoration-none text-reset align-middle text-light">account_circle</a>
+					</li>
+				</ul>
+			</div>	
+		</div>
+		<!-- Navigationbar end -->
+		<!-- banner start -->
+		<div class="check-in-out-buttons row justify-content-center">
+			<div class="col-3 text-center">
+				<a href="#" class="in btn btn-outline-light btn-lg shadow">Check-In</a>
+			</div>
+			<div class="col-3 text-center">
+				<a href="#" class="out btn btn-outline-light btn-lg shadow">Check-Out</a> 
+			</div>
+			<div class="text-center">
+				<a href="#" class="avl btn btn-outline-light btn-lg shadow">Availability</a> 
+			</div>
+		</div>
+	</div>
+	<!-- banner end	 -->
+
+	<!-- rooms card start-->
+	<div class="pt-3 pb-2 text-center bg-light rounded-1">
+		<h2>Rooms available at Hotel</h2>
+	</div>
+	<div class="row rooms-card justify-content-around pb-3 shadow border border-primary">
+		<div class="mt-5 card d-inline-block border border-danger" style="width: 18rem;">
+			<img src="https://pix8.agoda.net/hotelImages/8515928/-1/7ec2e45787efb56b5b85946d9b32a508.jpg?ca=9&ce=1" class="card-img-top mt-2" alt="room-img">
+			<div class="card-body">
+				<h5 class="card-title">Deluxe Double Room</h5>
+				<p class="card-text"><h6>Price-5999</h6>Room size: 23 m²/248 ft²<br>1 queen bed</p>
+				<a href="#" class="btn btn-primary room-btn">Know More</a>
+			</div>
+		</div>
+		<div class="mt-5 card d-inline-block border border-danger" style="width: 18rem;">
+			<img src="https://pix8.agoda.net/hotelImages/8515928/-1/9f60ec05c63d682a8ea2ec1e739c24f0.jpg?ca=9&ce=1" class="card-img-top mt-2" alt="room-img">
+			<div class="card-body">
+				<h5 class="card-title">Deluxe Suite</h5>
+				<p class="card-text"><h6>Price-6999</h6>Room size: 30 m²/323 ft²<br>1 queen bed</p>
+				<a href="#" class="btn btn-primary room-btn">Know More</a>
+			</div>
+		</div>
+		<div class="mt-5 card d-inline-block" style="width: 18rem;">
+			<img src="https://pix8.agoda.net/hotelImages/8515928/-1/d6c5892725ac8d3cf78946593e811891.jpg" class="card-img-top mt-2" alt="room-img">
+			<div class="card-body">
+				<h5 class="card-title">Superior Twin Room</h5>
+				<p class="card-text"><h6>Price-7999</h6>Room size: 22 m²/237 ft²<br>2 single beds</p>
+				<a href="#" class="btn btn-primary room-btn">Know More</a>
+			</div>
+		</div>
+	</div>
+	<!-- rooms card end-->
+
+	<!-- facilities start -->
+	<div class="mt-5 pb-2 text-center border border-primary">
+		<h2>Facilities</h2>
+	</div>
+	<div class="facilities container">
+		<div class="row facilities-icon justify-content-around text-center">
+			<div class="col-2">
+				<img src="wifi.png" >
+				<h6 class="">Free Wi-Fi in all rooms!</h6>
+			</div>
+			<div class="col-2">
+				<img src="air.png" >
+				<h6 class="">Air conditioning</h6>
+			</div>
+			<div class="col-2">
+				<img src="housekeeping.png" >
+				<h6 class="">Daily housekeeping</h6>
+			</div>
+			<div class="col-2">
+				<img src="curtains.png" >
+				<h6 class="">Blackout curtains</h6>
+			</div>
+			<div class="col-2">
+				<img src="dry.png" >
+				<h6 class="">Dry cleaning</h6>
+			</div>
+		</div>
+	</div>
+	<!-- facilities end -->
+
+	<div class="mt-5">
+		<h2 class="container">About -</h2>
+	</div>
+	<!-- reviews start-->
+	<div class="rev-img text-center mt-5">
+		<img class="" src="https://wiremo.co/wp-content/uploads/2018/11/1200x600.png">
+	</div>
+	<!-- reviews end-->
+
+	<!-- location start -->
+
+	<div class="container location-section">
+		<div class="pt-4 pb-4 text-center rounded-1">
+			<h2 class="d-inline-block">Location</h2>
+			<img class="location-icon-img" src="location-icon.png">
+		</div>
+		<div class="row location justify-content-around">
+			<div class="col-md-6 location-imgs">
+				<div class="row location-img-row1 justify-content-around">
+					<div class="col-3 text-center">
+						<div class="card-body">
+							<img src="hospital-bed.png" class="card-img-top shadow">
+							<a href="" class="card-title text-reset text-decoration-none">Nearest Hospital</a>
+						</div>
+					</div>
+					<div class="col-3 text-center">
+						<div class="card-body">
+							<img src="popcorn.png" class="card-img-top shadow">
+							<a href="" class="card-title text-reset text-decoration-none">Nearest Movie Theater</a>
+						</div>
+					</div>
+					<div class="col-3 text-center">
+						<div class="card-body">
+							<img src="police-station.png" class="card-img-top shadow">
+							<a href="" class="card-title text-reset text-decoration-none">Nearest Police Station</a>
+						</div>
+					</div>
+				</div>
+				<div class="row location-img-row2 justify-content-around">
+					<div class="col-3 text-center">
+						<div class="card-body">
+							<img src="pharmacy.png" class="card-img-top shadow">
+							<a href="" class="card-title text-reset text-decoration-none">Nearest Pharmacy</a>
+						</div>
+					</div>
+					<div class="col-3 text-center">
+						<div class="card-body">
+							<img src="Cafe.png" class="card-img-top shadow">
+							<a href="" class="card-title text-reset text-decoration-none">Nearest Cafe</a>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class="col-5 card shadow">
+				<iframe class="card-img p-3 shadow location-map"src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=HOTEL+HEAVEN"frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>	
+		</div>
+	</div>
+	<!-- location end -->
+
+	<!-- FAQ start -->
+
+	<div class="h2 text-center pt-5">Frequently Asked Questions (FAQ)</div>
+	<div class="accordion accordion-flush pt-3 faq-section" id="accordionFlushExample">
+		<div class="accordion-item faq-1">
+			<h2 class="accordion-header" id="flush-headingOne">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+					What time is check-in and check-out at Hotel A Tainan?
+				</button>
+			</h2>
+			<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+				<div class="accordion-body">Check-in is from 03:00 PM, and check-out is until 11:00 AM. You may request early check-in or late check-out during booking, subject to availability. Guests checking in or out before or after the designated periods may be charged an additional fee. The hotel offers luggage storage to guests for before check-in and after check-out. The front desk is always open, day or night.
+				</div>
+			</div>
+		</div>
+		<div class="accordion-item faq-2">
+			<h2 class="accordion-header" id="flush-headingTwo">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+					How do I get to Hotel A Tainan?
+				</button>
+			</h2>
+			<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+				<div class="accordion-body">For those who wish to drive their own cars, Hotel A Tainan has a car park on site, as well as additional parking nearby if the first car park is full. If you're looking for an easy way to get around Tainan with private transportation, the hotel can arrange taxi service.
+				</div>
+			</div>
+		</div>
+		<div class="accordion-item faq-3">
+			<h2 class="accordion-header" id="flush-headingThree">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+					Is breakfast offered at Hotel A Tainan?
+				</button>
+			</h2>
+			<div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+				<div class="accordion-body">Wake up to a great buffet breakfast at Hotel A Tainan. Western breakfast is available for guests. There's an additional charge of 317 TWD for adults and 200 TWD for children if not included in the room rate. You may save on breakfast costs with Agoda by booking a room with breakfast, which is often included for less than buying it at the hotel.
+				</div>
+			</div>
+		</div>
+		<div class="accordion-item faq-4">
+			<h2 class="accordion-header" id="flush-headingFour">
+				<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseFour">
+					Can business events be hosted at Hotel A Tainan?
+				</button>
+			</h2>
+			<div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+				<div class="accordion-body">On-site venues and convenient event services make Hotel A Tainan an ideal choice for hosting events such as corporate events and meetings. The venue available at the hotel can accommodate up to 30 people. An extensive range of facilities and services including projector or LED display, free Wi-Fi and meeting stationery is available to help your business meeting or event a successful one.
+				</div>
+			</div>
+		</div>
+		<div class="faq-more mt-2">
+			<a href="">Show more questions?</a>
+		</div>	
+	</div>
+
+
+	<!-- footer start -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row footer-row">
+				<div class="footer-col">
+					<h4>Help</h4>
+					<ul>
+						<li><a href="#">Help center</a></li>
+						<li><a href="#">FAQs</a></li>
+						<li><a href="#">privacy policy</a></li>
+						<li><a href="#">Cookie policy</a></li>
+						<li><a href="#">Terms of use</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>About us</h4>
+					<ul>
+						<li><a href="#">Poins MAX</a></li>
+						<li><a href="#">Careers</a></li>
+						<li><a href="#">Press</a></li>
+						<li><a href="#">Blog</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Destinations</h4>
+					<ul>
+						<li><a href="#">Countries/Territories</a></li>
+						<li><a href="#">Cities</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Get the app</h4>
+					<ul>
+						<li><a href="#">iOS app</a></li>
+						<li><a href="#">Android app</a></li>
+					</ul>
+				</div>
+				<div class="footer-col social-icon-section">
+					<h4>follow us</h4>
+					<div class="social-links">
+						<a href="#"><i class="fab fa-facebook-f"></i></a>
+						<a href="#"><i class="fab fa-twitter"></i></a>
+						<a href="#"><i class="fab fa-instagram"></i></a>
+						<a href="#"><i class="fab fa-linkedin-in"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- footer end -->
+</body>
